@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://ztadas.lt/xmlschema"
+        xmlns:tns="http://ztadas.lt/xmlschema" elementFormDefault="qualified">
+    <element name="GetWordsSortedRequest">
+        <complexType>
+            <sequence>
+                <element name="sentence" type="string"/>
+            </sequence>
+        </complexType>
+    </element> 
+    <complexType name="SortedWords">
+        <sequence>
+            <element name="sentence" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="GetWordsSortedResponse">
+        <complexType>
+            <sequence>
+                <element name="SortedWords" type="tns:SortedWords"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
